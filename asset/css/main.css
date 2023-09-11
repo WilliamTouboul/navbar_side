@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: 'satoshi';
+    src: url('../font/Satoshi-Variable.ttf');
+}
+
+@font-face {
+    font-family: 'fraktionMono';
+    src: url('../font/PPFraktionMono-Regular.otf');
+}
+
+:root {
+    font-size: 16px;
+    --black: #4a3c4b;
+    --white: #E0DED2;
+    --accent: #eb5a40;
+}
+
+body {
+    background-color: var(--white)
+}
+
+/* MAIN */
+
+nav {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background-color: var(--black);
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    cursor: pointer;
+    border-left: 2px dashed var(--accent);
+    z-index: 99999;
+}
+
+nav p {
+    font-family: 'fraktionMono';
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    color: var(--accent);
+}
+
+.toggle_square {
+    width: .8rem;
+    height: .8rem;
+    position: relative;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.toggle_square>div {
+    height: 4px;
+    width: 4px;
+
+    background-color: var(--accent);
+    position: absolute;
+    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+}
+
+.toggle_square>div:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.toggle_square>div:nth-child(2) {
+    top: 0;
+    right: 0;
+}
+
+.toggle_square>div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.toggle_square>div:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+nav:hover .toggle_square>div:nth-child(1) {
+    top: 3px;
+    left: 3px;
+}
+
+nav:hover .toggle_square>div:nth-child(2) {
+    top: 3px;
+    right: 3px;
+}
+
+nav:hover .toggle_square>div:nth-child(3) {
+    bottom: 3px;
+    left: 3px;
+}
+
+nav:hover .toggle_square>div:nth-child(4) {
+    bottom: 3px;
+    right: 3px;
+}
+
+nav>ul {
+    list-style: none;
+}
+
+nav>ul>li {
+    font-family: 'fraktionMono';
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--accent);
+    transition: all .15s cubic-bezier(.19, 1, .22, 1);
+}
+
+nav>ul>li:not(:first-child) {
+    margin-top: 1rem;
+}
+
+nav>ul>li:hover {
+    color: var(--white);
+}
+
+.open_nav {
+    background-color: var(--black);
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .6s cubic-bezier(.19, 1, .22, 1);
+}
+
+.open_nav_is_open{
+    right : 50px;
+}
+
+.square_hover {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square_hover:after {
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: var(--accent);
+    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+}
+
+.open_nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.open_nav ul li {
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    font-family: 'fraktionMono';
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    cursor : pointer;
+    gap: 1rem;
+}
+
+.open_nav ul li:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.open_nav ul li:hover .square_hover:after {
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+.open_nav ul li:last-child {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    text-transform: none;
+    letter-spacing : 2px;
+}
+
+.open_nav ul li:last-child:hover{
+    color : var(--white);
+}
+
+.open_nav ul li:last-child:hover .square_hover:after {
+    background-color: var(--white);
+}
+
+.open_nav .title{
+    margin-bottom : 2rem;
+    margin-left : 4rem;
+    font-family : 'satoshi';
+    color : var(--accent);
+    letter-spacing : 1.2px;
+    font-size : 2.5rem;
+}
