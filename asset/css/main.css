@@ -141,10 +141,11 @@ nav>ul>li:hover {
     flex-direction: column;
     justify-content: space-between;
     transition: all .6s cubic-bezier(.19, 1, .22, 1);
+    z-index: 99;
 }
 
-.open_nav_is_open{
-    right : 50px;
+.open_nav_is_open {
+    right: 50px;
 }
 
 .square_hover {
@@ -176,7 +177,7 @@ nav>ul>li:hover {
     text-transform: uppercase;
     color: var(--accent);
     display: flex;
-    cursor : pointer;
+    cursor: pointer;
     gap: 1rem;
 }
 
@@ -193,22 +194,141 @@ nav>ul>li:hover {
     font-size: 1.2rem;
     margin-top: 3rem;
     text-transform: none;
-    letter-spacing : 2px;
+    letter-spacing: 2px;
 }
 
-.open_nav ul li:last-child:hover{
-    color : var(--white);
+.open_nav ul li:last-child:hover {
+    color: var(--white);
 }
 
 .open_nav ul li:last-child:hover .square_hover:after {
     background-color: var(--white);
 }
 
-.open_nav .title{
-    margin-bottom : 2rem;
-    margin-left : 4rem;
-    font-family : 'satoshi';
-    color : var(--accent);
-    letter-spacing : 1.2px;
-    font-size : 2.5rem;
+.open_nav .title {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    font-family: 'satoshi';
+    color: var(--accent);
+    letter-spacing: 1.2px;
+    font-size: 2.5rem;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 6rem;
+    padding-right: calc(6rem + 50px);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    gap: 2rem;
+    position: relative;
+    z-index: 0;
+}
+
+.header>div {
+    width: 50%;
+}
+
+.header>.right {
+    border-radius: 30px;
+    background-position: right;
+    z-index: 0;
+}
+
+.header>.left>div>h1 {
+    font-size: 5rem;
+    font-family: 'fraktionMono';
+    color: var(--black);
+}
+
+.header>.left>div>p {
+    font-size: 1.8rem;
+    font-family: 'satoshi';
+    margin-top: 2rem;
+    line-height: 2.5rem;
+    width: 75%;
+    color: var(--black);
+}
+
+.header>.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header>.left svg{
+    transition: all 1s cubic-bezier(.19, 1, .22, 1);
+}
+.header>.left svg:hover {
+    transform: rotate(-180deg)
+}
+
+svg line {
+    stroke: var(--black);
+    transition: all .6s cubic-bezier(.19, 1, .22, 1);
+}
+
+svg path {
+    stroke: var(--black);
+}
+
+svg .path_will_change {
+    fill: var(--black);
+}
+
+
+.header .horizontal_line {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 12rem - 50px);
+    border-top: 1px dashed var(--black);
+}
+
+.left_inner_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 2vw;
+}
+
+.left_inner_2>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.left_inner_2>div>div {
+    font-family: 'satoshi';
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    padding-left: 0.2rem;
+}
+
+.left_inner_2>div>div>div {
+    width: .8rem;
+    height: .8rem;
+    background-color: rgb(35, 207, 0);
+}
+
+.left_inner_2 button {
+    background-color: var(--black);
+    border: 1px var(--accent) dashed;
+    color: var(--accent);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'fraktionMono';
+    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+}
+
+.left_inner_2 button:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    border-radius: 12px;
 }
