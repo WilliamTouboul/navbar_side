@@ -1,334 +1,500 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
 
 @font-face {
-    font-family: 'satoshi';
-    src: url('../font/Satoshi-Variable.ttf');
+   font-family: "satoshi";
+   src: url("../font/Satoshi-Variable.ttf");
 }
 
 @font-face {
-    font-family: 'fraktionMono';
-    src: url('../font/PPFraktionMono-Regular.otf');
+   font-family: "fraktionMono";
+   src: url("../font/PPFraktionMono-Regular.otf");
 }
 
 :root {
-    font-size: 16px;
-    --black: #4a3c4b;
-    --white: #E0DED2;
-    --accent: #eb5a40;
+   font-size: 16px;
+   --black: #4a3c4b;
+   --white: #e0ded2;
+   --accent: #eb5a40;
+
+   --desk_section_padding: 10rem;
+}
+
+::selection {
+   color: var(--white);
+   background: var(--accent);
 }
 
 body {
-    background-color: var(--white)
+   background-color: var(--white);
 }
 
 /* MAIN */
 
 nav {
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    background-color: var(--black);
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    cursor: pointer;
-    border-left: 2px dashed var(--accent);
-    z-index: 99999;
+   position: fixed;
+   right: 0;
+   height: 100vh;
+   background-color: var(--black);
+   width: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   cursor: pointer;
+   border-left: 2px dashed var(--accent);
+   z-index: 99999;
 }
 
 nav p {
-    font-family: 'fraktionMono';
-    text-transform: uppercase;
-    transform: rotate(90deg);
-    color: var(--accent);
+   font-family: "fraktionMono";
+   text-transform: uppercase;
+   transform: rotate(90deg);
+   color: var(--accent);
 }
 
 .toggle_square {
-    width: .8rem;
-    height: .8rem;
-    position: relative;
-    margin: auto;
-    margin-top: 2rem;
+   width: 0.8rem;
+   height: 0.8rem;
+   position: relative;
+   margin: auto;
+   margin-top: 2rem;
 }
 
-.toggle_square>div {
-    height: 4px;
-    width: 4px;
+.toggle_square > div {
+   height: 4px;
+   width: 4px;
 
-    background-color: var(--accent);
-    position: absolute;
-    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+   background-color: var(--accent);
+   position: absolute;
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.toggle_square>div:nth-child(1) {
-    top: 0;
-    left: 0;
+.toggle_square > div:nth-child(1) {
+   top: 0;
+   left: 0;
 }
 
-.toggle_square>div:nth-child(2) {
-    top: 0;
-    right: 0;
+.toggle_square > div:nth-child(2) {
+   top: 0;
+   right: 0;
 }
 
-.toggle_square>div:nth-child(3) {
-    bottom: 0;
-    left: 0;
+.toggle_square > div:nth-child(3) {
+   bottom: 0;
+   left: 0;
 }
 
-.toggle_square>div:nth-child(4) {
-    bottom: 0;
-    right: 0;
+.toggle_square > div:nth-child(4) {
+   bottom: 0;
+   right: 0;
 }
 
-nav:hover .toggle_square>div:nth-child(1) {
-    top: 3px;
-    left: 3px;
+nav:hover .toggle_square > div:nth-child(1) {
+   top: 3px;
+   left: 3px;
 }
 
-nav:hover .toggle_square>div:nth-child(2) {
-    top: 3px;
-    right: 3px;
+nav:hover .toggle_square > div:nth-child(2) {
+   top: 3px;
+   right: 3px;
 }
 
-nav:hover .toggle_square>div:nth-child(3) {
-    bottom: 3px;
-    left: 3px;
+nav:hover .toggle_square > div:nth-child(3) {
+   bottom: 3px;
+   left: 3px;
 }
 
-nav:hover .toggle_square>div:nth-child(4) {
-    bottom: 3px;
-    right: 3px;
+nav:hover .toggle_square > div:nth-child(4) {
+   bottom: 3px;
+   right: 3px;
 }
 
-nav>ul {
-    list-style: none;
+nav > ul {
+   list-style: none;
 }
 
-nav>ul>li {
-    font-family: 'fraktionMono';
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: var(--accent);
-    transition: all .15s cubic-bezier(.19, 1, .22, 1);
+nav > ul > li {
+   font-family: "fraktionMono";
+   text-transform: uppercase;
+   font-size: 1.2rem;
+   color: var(--accent);
+   transition: all 0.15s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav>ul>li:not(:first-child) {
-    margin-top: 1rem;
+nav > ul > li:not(:first-child) {
+   margin-top: 1rem;
 }
 
-nav>ul>li:hover {
-    color: var(--white);
+nav > ul > li:hover {
+   color: var(--white);
 }
 
 .open_nav {
-    background-color: var(--black);
-    width: 20vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -20vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all .6s cubic-bezier(.19, 1, .22, 1);
-    z-index: 99;
+   background-color: var(--black);
+   width: 20vw;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   right: -20vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+   z-index: 99;
 }
 
 .open_nav_is_open {
-    right: 50px;
+   right: 50px;
 }
 
 .square_hover {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   width: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .square_hover:after {
-    content: '';
-    width: 0;
-    height: 0;
-    background-color: var(--accent);
-    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+   content: "";
+   width: 0;
+   height: 0;
+   background-color: var(--accent);
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .open_nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   padding-top: 2rem;
 }
 
 .open_nav ul li {
-    padding-left: 1rem;
-    font-size: 1.8rem;
-    font-family: 'fraktionMono';
-    text-transform: uppercase;
-    color: var(--accent);
-    display: flex;
-    cursor: pointer;
-    gap: 1rem;
+   padding-left: 1rem;
+   font-size: 1.8rem;
+   font-family: "fraktionMono";
+   text-transform: uppercase;
+   color: var(--accent);
+   display: flex;
+   cursor: pointer;
+   gap: 1rem;
 }
 
 .open_nav ul li:not(:first-child) {
-    margin-top: 2rem;
+   margin-top: 2rem;
 }
 
 .open_nav ul li:hover .square_hover:after {
-    height: 0.5rem;
-    width: 0.5rem;
+   height: 0.5rem;
+   width: 0.5rem;
 }
 
 .open_nav ul li:last-child {
-    font-size: 1.2rem;
-    margin-top: 3rem;
-    text-transform: none;
-    letter-spacing: 2px;
+   font-size: 1.2rem;
+   margin-top: 3rem;
+   text-transform: none;
+   letter-spacing: 2px;
 }
 
 .open_nav ul li:last-child:hover {
-    color: var(--white);
+   color: var(--white);
 }
 
 .open_nav ul li:last-child:hover .square_hover:after {
-    background-color: var(--white);
+   background-color: var(--white);
 }
 
 .open_nav .title {
-    margin-bottom: 2rem;
-    margin-left: 4rem;
-    font-family: 'satoshi';
-    color: var(--accent);
-    letter-spacing: 1.2px;
-    font-size: 2.5rem;
+   margin-bottom: 2rem;
+   margin-left: 4rem;
+   font-family: "satoshi";
+   color: var(--accent);
+   letter-spacing: 1.2px;
+   font-size: 2.5rem;
 }
 
 /* HEADER */
 
 .header {
-    width: 100%;
-    height: 95vh;
-    display: flex;
-    flex-direction: row;
-    padding-left: 6rem;
-    padding-right: calc(6rem + 50px);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    gap: 2rem;
-    position: relative;
-    z-index: 0;
+   width: 100%;
+   min-height: 90vh;
+   display: flex;
+   flex-direction: row;
+   padding-left: var(--desk_section_padding);
+   padding-right: calc(var(--desk_section_padding) + 50px);
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+   gap: 4rem;
+   position: relative;
+   z-index: 0;
 }
 
-.header>div {
-    width: 50%;
+.header > div {
+   width: 50%;
 }
 
-.header>.right {
-    border-radius: 30px;
-    background-position: right;
-    z-index: 0;
+.header > .right {
+   border-radius: 30px;
+   background-position: right;
+   z-index: 0;
 }
 
-.header>.left>div>h1 {
-    font-size: 5rem;
-    font-family: 'fraktionMono';
-    color: var(--black);
+.header > .left > div > h1 {
+   font-size: 5rem;
+   letter-spacing: -6px;
+   font-family: "fraktionMono";
+   color: var(--black);
 }
 
-.header>.left>div>p {
-    font-size: 1.8rem;
-    font-family: 'satoshi';
-    margin-top: 2rem;
-    line-height: 2.5rem;
-    width: 75%;
-    color: var(--black);
+.header > .left > div > p {
+   font-size: 1.8rem;
+   font-family: "satoshi";
+   margin-top: 2rem;
+   line-height: 2.5rem;
+   width: 75%;
+   color: var(--black);
 }
 
-.header>.left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.header > .left {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
-.header>.left svg{
-    transition: all 1s cubic-bezier(.19, 1, .22, 1);
+
+.header > .left svg {
+   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.header>.left svg:hover {
-    transform: rotate(-180deg)
+
+.header > .left svg:hover {
+   transform: rotate(-180deg);
 }
 
 svg line {
-    stroke: var(--black);
-    transition: all .6s cubic-bezier(.19, 1, .22, 1);
+   stroke: var(--black);
+   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 svg path {
-    stroke: var(--black);
+   stroke: var(--black);
 }
 
 svg .path_will_change {
-    fill: var(--black);
+   fill: var(--black);
 }
 
-
-.header .horizontal_line {
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 12rem - 50px);
-    border-top: 1px dashed var(--black);
+.header .horizontal_line,
+.horizontal_line {
+   position: absolute;
+   bottom: 0;
+   width: calc(100% - 20rem - 50px);
+   border-top: 1px dashed var(--black);
 }
 
 .left_inner_2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 2vw;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding-right: 2vw;
 }
 
-.left_inner_2>div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.left_inner_2 > div {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
 }
 
-.left_inner_2>div>div {
-    font-family: 'satoshi';
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.2rem;
-    padding-left: 0.2rem;
+.left_inner_2 > div > div {
+   font-family: "satoshi";
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   font-size: 1.2rem;
+   padding-left: 0.2rem;
 }
 
-.left_inner_2>div>div>div {
-    width: .8rem;
-    height: .8rem;
-    background-color: rgb(35, 207, 0);
+.left_inner_2 > div > div > div {
+   width: 0.8rem;
+   height: 0.8rem;
+   background-color: rgb(61, 184, 12);
 }
 
 .left_inner_2 button {
-    background-color: var(--black);
-    border: 1px var(--accent) dashed;
-    color: var(--accent);
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-family: 'fraktionMono';
-    transition: all .3s cubic-bezier(.19, 1, .22, 1);
+   background-color: var(--black);
+   border: 1px var(--accent) dashed;
+   color: var(--accent);
+   padding: 1rem 2rem;
+   font-size: 1.2rem;
+   cursor: pointer;
+   font-family: "fraktionMono";
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+   position: relative;
 }
 
 .left_inner_2 button:hover {
-    background-color: var(--accent);
-    color: var(--white);
-    border-radius: 12px;
+   background-color: var(--accent);
+   color: var(--white);
+}
+
+.left_inner_2 button div {
+   position: absolute;
+   height: 0.4rem;
+   width: 0.4rem;
+   background-color: var(--accent);
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.left_inner_2 button > div:first-child {
+   top: 0;
+   left: 0;
+}
+
+.left_inner_2 button > div:nth-child(2) {
+   top: 0;
+   right: 0;
+}
+
+.left_inner_2 button > div:nth-child(3) {
+   bottom: 0;
+   left: 0;
+}
+
+.left_inner_2 button > div:nth-child(4) {
+   bottom: 0;
+   right: 0;
+}
+
+.left_inner_2 button:hover > div {
+   background-color: var(--white);
+}
+
+.left_inner_2 button:hover > div:first-child {
+   top: 24px;
+   left: 20px;
+}
+
+.left_inner_2 button:hover > div:nth-child(2) {
+   top: 24px;
+   right: 20px;
+}
+
+.left_inner_2 button:hover > div:nth-child(3) {
+   bottom: 24px;
+   left: 20px;
+}
+
+.left_inner_2 button:hover > div:nth-child(4) {
+   bottom: 24px;
+   right: 20px;
+}
+
+/* -------------------------------- Services -------------------------------- */
+.services {
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   padding-left: var(--desk_section_padding);
+   padding-right: var(--desk_section_padding);
+}
+
+.services > div:first-child {
+   width: 30%;
+   padding-left: 2rem;
+   position: relative;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+.services > div:first-child:after {
+   position: absolute;
+   content: "";
+   height: calc(100% - 4rem);
+   top: 2rem;
+   right: 0;
+   width: 1px;
+   border-right: 1px dashed var(--black);
+}
+.services > div:first-child > h2 {
+   font-family: "fraktionMono";
+   font-size: 1rem;
+   font-weight: 400;
+   color: var(--black);
+}
+
+.services > div:nth-child(2) {
+   width: 70%;
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.services .grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   position: relative;
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+.services .grid:after {
+   content: "";
+   position: absolute;
+   width: 98%;
+   height: 1px;
+   border-bottom: 1px dashed var(--black);
+   top: 48.5%;
+}
+
+.services .grid > div:first-child,
+.services .grid > div:nth-child(3) {
+   position: relative;
+   padding-right: 2rem;
+}
+
+.services .grid > div:first-child:after,
+.services .grid > div:nth-child(3):after {
+   position: absolute;
+   content: "";
+   height: calc(100% - 4rem);
+   top: 2rem;
+   right: 0;
+   width: 1px;
+   border-right: 1px dashed var(--black);
+}
+
+.services .grid > div:nth-child(2),
+.services .grid > div:nth-child(4) {
+   padding-left: 2rem;
+}
+
+.services .grid > div {
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+.services .grid > div h3 {
+   font-size: 2rem;
+   font-family: "fraktionMono";
+   color: var(--black);
+}
+
+.services .grid > div p {
+   font-family: "satoshi";
+   margin-top: 1rem;
+   color: var(--black);
+}
+
+.services svg {
+   margin-top: 0.1rem;
 }
