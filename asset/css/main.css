@@ -22,7 +22,7 @@
    --white: #e0ded2;
    --accent: #eb5a40;
 
-   --desk_section_padding: 10rem;
+   --desk_section_padding: 6rem;
 }
 
 ::selection {
@@ -68,7 +68,7 @@ nav p {
    margin-top: 2rem;
 }
 
-.toggle_square > div {
+.toggle_square>div {
    height: 4px;
    width: 4px;
 
@@ -77,51 +77,51 @@ nav p {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.toggle_square > div:nth-child(1) {
+.toggle_square>div:nth-child(1) {
    top: 0;
    left: 0;
 }
 
-.toggle_square > div:nth-child(2) {
+.toggle_square>div:nth-child(2) {
    top: 0;
    right: 0;
 }
 
-.toggle_square > div:nth-child(3) {
+.toggle_square>div:nth-child(3) {
    bottom: 0;
    left: 0;
 }
 
-.toggle_square > div:nth-child(4) {
+.toggle_square>div:nth-child(4) {
    bottom: 0;
    right: 0;
 }
 
-nav:hover .toggle_square > div:nth-child(1) {
+nav:hover .toggle_square>div:nth-child(1) {
    top: 3px;
    left: 3px;
 }
 
-nav:hover .toggle_square > div:nth-child(2) {
+nav:hover .toggle_square>div:nth-child(2) {
    top: 3px;
    right: 3px;
 }
 
-nav:hover .toggle_square > div:nth-child(3) {
+nav:hover .toggle_square>div:nth-child(3) {
    bottom: 3px;
    left: 3px;
 }
 
-nav:hover .toggle_square > div:nth-child(4) {
+nav:hover .toggle_square>div:nth-child(4) {
    bottom: 3px;
    right: 3px;
 }
 
-nav > ul {
+nav>ul {
    list-style: none;
 }
 
-nav > ul > li {
+nav>ul>li {
    font-family: "fraktionMono";
    text-transform: uppercase;
    font-size: 1.2rem;
@@ -130,11 +130,11 @@ nav > ul > li {
    position: relative;
 }
 
-nav > ul > li:not(:first-child) {
+nav>ul>li:not(:first-child) {
    margin-top: 1rem;
 }
 
-nav > ul > li:hover {
+nav>ul>li:hover {
    color: var(--white);
 }
 
@@ -206,11 +206,11 @@ nav > ul > li:hover {
    letter-spacing: 2px;
 }
 
-.open_nav ul li:last-child:hover {
+.open_nav ul li:hover {
    color: var(--white);
 }
 
-.open_nav ul li:last-child:hover .square_hover:after {
+.open_nav ul li:hover .square_hover:after {
    background-color: var(--white);
 }
 
@@ -221,18 +221,6 @@ nav > ul > li:hover {
    color: var(--accent);
    letter-spacing: 1.2px;
    font-size: 2.5rem;
-}
-
-.open_nav ul li:not(:last-child):after {
-   content: "";
-   position: absolute;
-   width: 0;
-   height: 1px;
-   bottom: -0.5rem;
-   left: 3.3rem;
-   border-bottom: 1px dashed var(--accent);
-   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-   transform-origin: left;
 }
 
 .open_nav ul li:hover:after {
@@ -255,11 +243,11 @@ nav > ul > li:hover {
    z-index: 0;
 }
 
-.header > div {
+.header>div {
    width: 50%;
 }
 
-.header > .right {
+.header>.right {
    border-radius: 30px;
    background-position: right;
    z-index: 0;
@@ -272,7 +260,7 @@ nav > ul > li:hover {
    transition: all ease 0.5s;
 }
 
-#imageContainer > * {
+#imageContainer>* {
    position: absolute;
    inset: 0;
    width: 100% !important;
@@ -284,14 +272,15 @@ nav > ul > li:hover {
    filter: saturate(80%);
 }
 
-.header > .left > div > h1 {
+.header>.left>div>h1 {
    font-size: 5rem;
    letter-spacing: -6px;
+   line-height: 110%;
    font-family: "fraktionMono";
    color: var(--black);
 }
 
-.header > .left > div > p {
+.header>.left>div>p {
    font-size: 1.8rem;
    font-family: "satoshi";
    margin-top: 2rem;
@@ -300,17 +289,17 @@ nav > ul > li:hover {
    color: var(--black);
 }
 
-.header > .left {
+.header>.left {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
 }
 
-.header > .left svg {
+.header>.left svg {
    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.header > .left svg:hover {
+.header>.left svg:hover {
    transform: rotate(-180deg);
 }
 
@@ -331,7 +320,7 @@ svg .path_will_change {
 .horizontal_line {
    position: absolute;
    bottom: 0;
-   width: calc(100% - 20rem - 50px);
+   width: calc(100% - 12rem - 50px);
    border-top: 1px dashed var(--black);
 }
 
@@ -342,13 +331,13 @@ svg .path_will_change {
    padding-right: 2vw;
 }
 
-.left_inner_2 > div {
+.left_inner_2>div {
    display: flex;
    flex-direction: column;
    gap: 1rem;
 }
 
-.left_inner_2 > div > div {
+.left_inner_2>div>div {
    font-family: "satoshi";
    display: flex;
    align-items: center;
@@ -357,13 +346,13 @@ svg .path_will_change {
    padding-left: 0.2rem;
 }
 
-.left_inner_2 > div > div > div {
+.left_inner_2>div>div>div {
    width: 0.8rem;
    height: 0.8rem;
    background-color: rgb(61, 184, 12);
 }
 
-.left_inner_2 button {
+.cta {
    background-color: var(--black);
    border: 1px var(--accent) dashed;
    color: var(--accent);
@@ -375,12 +364,12 @@ svg .path_will_change {
    position: relative;
 }
 
-.left_inner_2 button:hover {
+.cta:hover {
    background-color: var(--accent);
    color: var(--white);
 }
 
-.left_inner_2 button div {
+.cta div {
    position: absolute;
    height: 0.4rem;
    width: 0.4rem;
@@ -388,68 +377,69 @@ svg .path_will_change {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.left_inner_2 button > div:first-child {
+.cta>div:first-child {
    top: 0;
    left: 0;
 }
 
-.left_inner_2 button > div:nth-child(2) {
+.cta>div:nth-child(2) {
    top: 0;
    right: 0;
 }
 
-.left_inner_2 button > div:nth-child(3) {
+.cta>div:nth-child(3) {
    bottom: 0;
    left: 0;
 }
 
-.left_inner_2 button > div:nth-child(4) {
+.cta>div:nth-child(4) {
    bottom: 0;
    right: 0;
 }
 
-.left_inner_2 button:hover > div {
+.cta:hover>div {
    background-color: var(--white);
 }
 
-.left_inner_2 button:hover > div:first-child {
+.cta:hover>div:first-child {
    top: 24px;
    left: 20px;
 }
 
-.left_inner_2 button:hover > div:nth-child(2) {
+.cta:hover>div:nth-child(2) {
    top: 24px;
    right: 20px;
 }
 
-.left_inner_2 button:hover > div:nth-child(3) {
+.cta:hover>div:nth-child(3) {
    bottom: 24px;
    left: 20px;
 }
 
-.left_inner_2 button:hover > div:nth-child(4) {
+.cta:hover>div:nth-child(4) {
    bottom: 24px;
    right: 20px;
 }
 
 /* -------------------------------- Services -------------------------------- */
-.services {
+section {
    display: flex;
    flex-direction: row;
    position: relative;
    padding-left: var(--desk_section_padding);
    padding-right: var(--desk_section_padding);
-}
-
-.services > div:first-child {
-   width: 30%;
-   padding-left: 2rem;
-   position: relative;
    padding-top: 2rem;
    padding-bottom: 2rem;
 }
 
-.services > div:first-child:after {
+.services>div:first-child {
+   width: 30%;
+   padding-left: 2rem;
+   position: relative;
+   padding-top: 2rem;
+}
+
+.services>div:first-child:after {
    position: absolute;
    content: "";
    height: calc(100% - 4rem);
@@ -458,15 +448,17 @@ svg .path_will_change {
    width: 1px;
    border-right: 1px dashed var(--black);
 }
-.services > div:first-child > h2 {
+
+.section_title {
    font-family: "fraktionMono";
    text-transform: uppercase;
    font-size: 1rem;
    font-weight: 400;
+   letter-spacing: 2px;
    color: var(--black);
 }
 
-.services > div:nth-child(2) {
+.services>div:nth-child(2) {
    width: 70%;
    padding: 2rem;
    display: flex;
@@ -491,14 +483,14 @@ svg .path_will_change {
    top: 48.5%;
 }
 
-.services .grid > div:first-child,
-.services .grid > div:nth-child(3) {
+.services .grid>div:first-child,
+.services .grid>div:nth-child(3) {
    position: relative;
    padding-right: 2rem;
 }
 
-.services .grid > div:first-child:after,
-.services .grid > div:nth-child(3):after {
+.services .grid>div:first-child:after,
+.services .grid>div:nth-child(3):after {
    position: absolute;
    content: "";
    height: calc(100% - 4rem);
@@ -508,12 +500,12 @@ svg .path_will_change {
    border-right: 1px dashed var(--black);
 }
 
-.services .grid > div:nth-child(2),
-.services .grid > div:nth-child(4) {
+.services .grid>div:nth-child(2),
+.services .grid>div:nth-child(4) {
    padding-left: 2rem;
 }
 
-.services .grid > div {
+.services .grid>div {
    display: flex;
    flex-direction: row;
    gap: 2rem;
@@ -521,13 +513,13 @@ svg .path_will_change {
    padding-bottom: 2rem;
 }
 
-.services .grid > div h3 {
+.services .grid>div h3 {
    font-size: 2rem;
    font-family: "fraktionMono";
    color: var(--black);
 }
 
-.services .grid > div p {
+.services .grid>div p {
    font-family: "satoshi";
    margin-top: 1rem;
    color: var(--black);
@@ -537,42 +529,43 @@ svg .path_will_change {
    margin-top: 0.5rem;
 }
 
-.services .grid > div div > svg circle,
-.services .grid > div div > svg path {
+.services .grid>div div>svg circle,
+.services .grid>div div>svg path {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.services .grid > div:first-child:hover div > svg {
+.services .grid>div:first-child:hover div>svg {
    animation: rotate 1.8s linear infinite;
 }
 
-.services .grid > div:first-child:hover div > svg circle {
+.services .grid>div:first-child:hover div>svg circle {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
    stroke: var(--accent);
 }
 
-.services .grid > div:nth-child(2):hover div svg {
+.services .grid>div:nth-child(2):hover div svg {
    animation: pointing 0.8s alternate infinite ease-in-out;
 }
 
-.services .grid > div:nth-child(2):hover div svg path {
+.services .grid>div:nth-child(2):hover div svg path {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
    stroke: var(--accent);
 }
-.services .grid > div:nth-child(3):hover div svg {
+
+.services .grid>div:nth-child(3):hover div svg {
    animation: pulse 0.8s linear infinite;
 }
 
-.services .grid > div:nth-child(3):hover div svg circle {
+.services .grid>div:nth-child(3):hover div svg circle {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
    stroke: var(--accent);
 }
 
-.services .grid > div:nth-child(4):hover div svg {
+.services .grid>div:nth-child(4):hover div svg {
    animation: quarter_rotate 2.5s linear infinite;
 }
 
-.services .grid > div:nth-child(4):hover div svg path {
+.services .grid>div:nth-child(4):hover div svg path {
    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
    stroke: var(--accent);
 }
@@ -581,6 +574,7 @@ svg .path_will_change {
    0% {
       transform: rotate(0deg);
    }
+
    100% {
       transform: rotate(360deg);
    }
@@ -590,6 +584,7 @@ svg .path_will_change {
    0% {
       transform: translate(0, 0);
    }
+
    100% {
       transform: translate(1rem, 1rem);
    }
@@ -599,6 +594,7 @@ svg .path_will_change {
    0% {
       transform: scale(1);
    }
+
    50% {
       transform: scale(1.2);
    }
@@ -608,28 +604,170 @@ svg .path_will_change {
    0% {
       transform: rotate(0deg);
    }
+
    20% {
       transform: rotate(0deg);
    }
+
    25% {
       transform: rotate(90deg);
    }
+
    45% {
       transform: rotate(90deg);
    }
+
    50% {
       transform: rotate(180deg);
    }
+
    70% {
       transform: rotate(180deg);
    }
+
    75% {
       transform: rotate(270deg);
    }
+
    95% {
       transform: rotate(270deg);
    }
+
    100% {
       transform: rotate(360deg);
    }
+}
+
+/* -------------------------------- PROJET -------------------------------- */
+
+.project {
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   padding-left: var(--desk_section_padding);
+   padding-right: var(--desk_section_padding);
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+.project>.left {
+   width: 30%;
+   padding-left: 2rem;
+   position: relative;
+   padding-top: 2rem;
+}
+
+.project>.left>.left_inner>p {
+   margin-top: 2rem;
+   font-size: 1.2rem;
+   font-family: "satoshi";
+   width: 95%;
+   text-wrap: balance;
+   margin-bottom: 2rem;
+}
+
+.project>.left>.vertical_line {
+   position: absolute;
+   width: 1px;
+   height: calc(100% - 4rem);
+   top: 2rem;
+   right: 0;
+   border-right: 1px var(--black) dashed;
+}
+
+.project>.right {
+   width: 70%;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   padding-left: 4rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.grid_project {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding-right: 3rem;
+   position: relative;
+}
+
+.grid_project_item {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   position: relative;
+}
+
+.grid_project_item .top {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.grid_project_item .top img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 30px;
+}
+
+.grid_project_item .info {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+.grid_project>div:first-child {
+   grid-column: 1 / span 2;
+   padding-bottom: 1rem;
+}
+
+.grid_project_item h3 {
+   font-family: 'fraktionMono';
+   font-size: 1.2rem;
+   font-weight: 400;
+}
+
+.grid_project_item p {
+   font-size: 1rem;
+   font-family: 'satoshi';
+}
+
+.project_grid_horiline {
+   width: calc(100% - 1rem);
+   position: absolute;
+   left: .5rem;
+   bottom: -1rem;
+   height: 1px;
+   border-bottom: 1px var(--black) dashed;
+}
+
+.project_grid_vertiline{
+   height : 100%;
+   position: absolute;
+   right : -2rem;
+   top : -.5rem;
+   width : 1px;
+   border-right : 1px var(--black) dashed;
+
+}
+.grid_project>div:nth-child(2),
+.grid_project>div:nth-child(3),
+.grid_project>div:nth-child(4),
+.grid_project>div:nth-child(5) {
+   margin-top: 4rem;
+}
+
+
+.grid_project>div:nth-child(2),
+.grid_project>div:nth-child(4) {
+   margin-right: 2rem;
+}
+
+.grid_project>div:nth-child(3),
+.grid_project>div:nth-child(5) {
+   margin-left: 2rem;
 }
