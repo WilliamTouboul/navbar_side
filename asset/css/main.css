@@ -19,7 +19,7 @@
 :root {
    font-size: 16px;
    --black: #4a3c4b;
-   --white: #fffbef;
+   --white: #e0ded2;
    --accent: #eb5a40;
 
    --desk_section_padding: 10rem;
@@ -263,6 +263,25 @@ nav > ul > li:hover {
    border-radius: 30px;
    background-position: right;
    z-index: 0;
+   position: relative;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 100%;
+   transition: all ease 0.5s;
+}
+
+#imageContainer > * {
+   position: absolute;
+   inset: 0;
+   width: 100% !important;
+   height: 100% !important;
+   object-fit: cover;
+}
+
+#imageContainer * {
+   filter: saturate(80%);
 }
 
 .header > .left > div > h1 {
