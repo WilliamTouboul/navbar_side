@@ -19,7 +19,7 @@
 :root {
    font-size: 16px;
    --black: #4a3c4b;
-   --white: #e0ded2;
+   --white: #fffbef;
    --accent: #eb5a40;
 
    --desk_section_padding: 10rem;
@@ -127,6 +127,7 @@ nav > ul > li {
    font-size: 1.2rem;
    color: var(--accent);
    transition: all 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+   position: relative;
 }
 
 nav > ul > li:not(:first-child) {
@@ -186,6 +187,7 @@ nav > ul > li:hover {
    display: flex;
    cursor: pointer;
    gap: 1rem;
+   position: relative;
 }
 
 .open_nav ul li:not(:first-child) {
@@ -219,6 +221,22 @@ nav > ul > li:hover {
    color: var(--accent);
    letter-spacing: 1.2px;
    font-size: 2.5rem;
+}
+
+.open_nav ul li:not(:last-child):after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 1px;
+   bottom: -0.5rem;
+   left: 3.3rem;
+   border-bottom: 1px dashed var(--accent);
+   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+   transform-origin: left;
+}
+
+.open_nav ul li:hover:after {
+   width: 55%;
 }
 
 /* HEADER */
@@ -423,6 +441,7 @@ svg .path_will_change {
 }
 .services > div:first-child > h2 {
    font-family: "fraktionMono";
+   text-transform: uppercase;
    font-size: 1rem;
    font-weight: 400;
    color: var(--black);
@@ -496,23 +515,47 @@ svg .path_will_change {
 }
 
 .services svg {
-   margin-top: 0.1rem;
+   margin-top: 0.5rem;
+}
+
+.services .grid > div div > svg circle,
+.services .grid > div div > svg path {
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .services .grid > div:first-child:hover div > svg {
    animation: rotate 1.8s linear infinite;
 }
 
+.services .grid > div:first-child:hover div > svg circle {
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+   stroke: var(--accent);
+}
+
 .services .grid > div:nth-child(2):hover div svg {
    animation: pointing 0.8s alternate infinite ease-in-out;
 }
 
+.services .grid > div:nth-child(2):hover div svg path {
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+   stroke: var(--accent);
+}
 .services .grid > div:nth-child(3):hover div svg {
    animation: pulse 0.8s linear infinite;
 }
 
+.services .grid > div:nth-child(3):hover div svg circle {
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+   stroke: var(--accent);
+}
+
 .services .grid > div:nth-child(4):hover div svg {
    animation: quarter_rotate 2.5s linear infinite;
+}
+
+.services .grid > div:nth-child(4):hover div svg path {
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+   stroke: var(--accent);
 }
 
 @keyframes rotate {
